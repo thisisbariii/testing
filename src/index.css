@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+/* REMOVE DEFAULT RANGE STYLES */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* TRACK */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #dff5e1; /* light green track */
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: #dff5e1;
+  border-radius: 999px;
+}
+
+/* THUMB */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #3bb54a;
+  border-radius: 50%;
+  margin-top: -5px; /* centers thumb */
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #3bb54a;
+  border-radius: 50%;
+  border: none;
+}
