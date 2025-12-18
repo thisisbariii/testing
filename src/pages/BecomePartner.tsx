@@ -216,7 +216,7 @@ export default function BecomePartner() {
             <Testimonial 
               name="Sanjay Yadav" 
               text="I feel proud to be a Trisaran Partner. This job has earned me respect in society. I am happy to help people in difficulties."
-              img="/assets/Sanjay.png"
+              img="/assets/sanjay.png"
             />
           </div>
         </div>
