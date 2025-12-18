@@ -223,30 +223,38 @@ export default function BecomePartner() {
       </section>
 
       {/* FINAL CTA - DYNAMIC BUTTON */}
-      <section className="w-full bg-white py-12 md:py-20">
-        <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[40px] md:rounded-[80px] relative min-h-[300px] flex items-center overflow-hidden p-8 md:p-0">
-          <div className="md:pl-24 z-20 w-full lg:w-3/5 text-center md:text-left">
-            <h2 className="text-white text-2xl md:text-[38px] font-normal leading-tight mb-4">
-              Register as a Trisaran Partner
-            </h2>
-            <p className="text-white/90 text-base md:text-[22px] mb-8">
-              Grow your business. Grow your career.
-            </p>
-            <button className="bg-white text-black px-10 py-3 rounded-full text-base font-semibold hover:bg-gray-100 transition-all shadow-lg active:scale-95">
-              <span className="md:hidden">Download Now</span>
-              <span className="hidden md:block">Register Now</span>
-            </button>
-          </div>
+          
+<section className="w-full bg-white py-12 md:py-20 font-poppins">
+  <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-16 md:py-20">
 
-          <div className="hidden md:flex absolute right-0 bottom-0 h-full w-1/2 justify-end items-end pointer-events-none z-10">
-            <img 
-              src="/assets/shake.webp" 
-              alt="Handshake" 
-              className="h-[90%] w-auto object-contain mr-10 lg:mr-32" 
-            />
-          </div>
-        </div>
-      </section>
+    {/* Content Area */}
+    <div className="z-20 w-full md:w-3/5 px-6 md:px-24 flex flex-col items-start">
+      <h2 className="text-white text-2xl md:text-[38px] font-normal leading-[1.15] mb-2 tracking-tight">
+        Register as a Trisaran Partner
+      </h2>
+
+      <p className="text-white/90 text-base md:text-[22px] mb-6 md:mb-10 font-normal">
+        Grow your business. Grow your career
+      </p>
+
+      <button className="bg-white text-black px-8 md:px-12 py-3 rounded-full text-[15px] md:text-[17px] font-medium hover:bg-gray-100 transition-all shadow-sm">
+        Register Now
+      </button>
+    </div>
+
+    {/* Handshake Image */}
+    <div className="absolute right-0 bottom-0 h-auto w-1/2 md:w-1/2 flex justify-end items-end pointer-events-none z-10">
+      <img
+        src="/assets/shake.webp"
+        alt="Partner Handshake"
+        className="h-auto max-h-[250px] md:max-h-[300px] w-auto object-contain object-right-bottom mr-6 md:mr-20 lg:mr-32"
+      />
+    </div>
+
+    {/* Mobile Gradient for readability */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#3b4758] via-[#3b4758]/30 to-transparent md:hidden z-15"></div>
+  </div>
+</section>
     </div>
   );
 }

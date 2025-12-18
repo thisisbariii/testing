@@ -226,45 +226,39 @@ export default function Home() {
       </section>
 
       {/* Partner Section - FIXED PROPORTIONS */}
- <section className="w-full bg-white py-12 md:py-20 font-poppins">
-  {/* The outer container width and deep corners (80px) to match the screenshot */}
-  <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative h-[320px] md:h-[300px] flex items-center overflow-hidden">
-    
-    {/* Content Area - Aligned exactly like the 'real' image */}
-    <div className="pl-10 md:pl-24 z-20 w-full lg:w-3/5">
-      {/* - font-normal is weight 400 
-          - tracking-tight makes the Poppins 400 look more professional 
-      */}
-      <h2 className="text-white text-3xl md:text-[38px] font-normal leading-[1.15] mb-2 tracking-tight">
+      
+<section className="w-full bg-white py-12 md:py-20 font-poppins">
+  <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-16 md:py-20">
+
+    {/* Content Area */}
+    <div className="z-20 w-full md:w-3/5 px-6 md:px-24 flex flex-col items-start">
+      <h2 className="text-white text-2xl md:text-[38px] font-normal leading-[1.15] mb-2 tracking-tight">
         Register as a Trisaran Partner
       </h2>
-      
-      <p className="text-white/90 text-lg md:text-[22px] mb-10 font-normal">
+
+      <p className="text-white/90 text-base md:text-[22px] mb-6 md:mb-10 font-normal">
         Grow your business. Grow your career
       </p>
-      
-      {/* Button: Pill shape, weight 500/medium for readability */}
-      <button className="bg-white text-black px-12 py-3 rounded-full text-[17px] font-medium hover:bg-gray-100 transition-all shadow-sm">
+
+      <button className="bg-white text-black px-8 md:px-12 py-3 rounded-full text-[15px] md:text-[17px] font-medium hover:bg-gray-100 transition-all shadow-sm">
         Register Now
       </button>
     </div>
 
-    {/* Handshake Image:
-        - Positioned to overlap the bottom edge slightly
-        - 'h-[95%]' keeps them tall within the frame 
-    */}
-    <div className="absolute right-0 bottom-0 h-full w-1/2 flex justify-end items-end pointer-events-none z-10">
-      <img 
-        src="/assets/shake.webp" 
-        alt="Partner Handshake" 
-        className="h-[95%] w-auto object-contain object-right-bottom mr-6 md:mr-20 lg:mr-32" 
+    {/* Handshake Image */}
+    <div className="absolute right-0 bottom-0 h-auto w-1/2 md:w-1/2 flex justify-end items-end pointer-events-none z-10">
+      <img
+        src="/assets/shake.webp"
+        alt="Partner Handshake"
+        className="h-auto max-h-[250px] md:max-h-[300px] w-auto object-contain object-right-bottom mr-6 md:mr-20 lg:mr-32"
       />
     </div>
 
-    {/* Mobile Gradient: Ensures text is readable over the image on small screens */}
+    {/* Mobile Gradient for readability */}
     <div className="absolute inset-0 bg-gradient-to-r from-[#3b4758] via-[#3b4758]/30 to-transparent md:hidden z-15"></div>
   </div>
 </section>
+
 
       <style>{`
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
