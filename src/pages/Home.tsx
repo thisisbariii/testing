@@ -113,7 +113,7 @@ export default function Home() {
   <div className="flex animate-infinite-scroll whitespace-nowrap items-center">
      {[1,2].map((set) => (
       <div key={set} className="flex items-center gap-10 md:gap-16 px-4 min-w-max">
-        {['kotak','bajaj','idfc','b','l','h','Axis','aditya'].map((img) => (
+        {['kotak','bajaj','idfc','b','l','h','axis','aditya'].map((img) => (
           <img 
             key={img} 
             src={`/assets/${img}.webp`} 

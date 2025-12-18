@@ -211,7 +211,7 @@ export default function BecomePartner() {
             <Testimonial 
               name="Aakash Saxena" 
               text="I joined Trisaran 5 months ago. The app is very user friendly and the personalized website features helped me get more customers."
-              img="/assets/Aakash.png"
+              img="/assets/aakash.png"
             />
             <Testimonial 
               name="Sanjay Yadav" 
