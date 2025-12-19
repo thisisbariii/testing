@@ -9,7 +9,7 @@ export default function AboutUs() {
         </h1>
 
         <p className="text-gray-600 text-[16px] leading-relaxed mb-6">
-          Established in 2024, Trisaran Money is focused on empowering rural and
+          Established in 2024, Himgiri Loans is focused on empowering rural and
           semi-urban communities through Credit Card, Instant Loan, Personal Loan,
           Business Loan, Home Loan, Loan Against Property, Education Loan, Auto Loan,
           Savining Accounts, Demat Accounts, Micro Loan, Group Loan, Private Funding

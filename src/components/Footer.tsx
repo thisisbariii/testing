@@ -10,10 +10,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-sm mb-4">About Us</h3>
             <p className="text-xs leading-relaxed">
-              TRISARAN MONEY was established in 2024 with a mission to promote
-              rural development, financial inclusion, and women empowerment
-              across India. The organization is committed to supporting
-              economically weaker sections in rural and semi-urban areas.
+              HIMGIRI LOANS was established with a mission to provide accessible
+              financial solutions and promote economic growth in Himachal Pradesh.
+              The organization is committed to supporting individuals and businesses
+              with reliable loan services across the region.
             </p>
           </div>
 
@@ -29,39 +29,64 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Register Office */}
+          {/* Main Office */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Register Office</h3>
-            <p className="text-xs leading-relaxed">
-              TRISARAN GRAMEEN MICRO APPEX FEDERATION
-            </p>
-            <p className="text-xs leading-relaxed mt-2">
-              Registration Date : 29-08-2024
+            
+            <h3 className="text-white font-semibold text-sm mb-4">Main Office</h3>
+            <p className="text-xs font-medium text-white mt-3">
+              HIMGIRI LOANS
             </p>
             <p className="text-xs leading-relaxed">
-              CIN: U88900MH2024NPL431405
+              VPO Baijnath, Distt Kangra, Himachal Pradesh
             </p>
-            <p className="text-xs leading-relaxed">
-              Email: contact@trisaranmoney.in
+            
+            <div className="mt-3 space-y-1">
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Mobile:</span> +91 9718998780
+              </p>
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Business:</span> +91 8076520212
+              </p>
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Phone:</span> +91 9816451000
+              </p>
+            </div>
+            
+            <p className="text-xs leading-relaxed mt-3">
+              Email: enquiry.himcoinwealth@himgiriloans.in
             </p>
+            
+            
           </div>
 
-          {/* Contact Us */}
+          {/* Branch Office */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Contact Us</h3>
-            <p className="text-xs leading-relaxed">
-              TRISARAN GRAMEEN MICRO APPEX FEDERATION
-            </p>
-            <p className="text-xs leading-relaxed mt-2">
-              Company Category : Microfinance (Section 8)
+           
+            <h3 className="text-white font-semibold text-sm mb-4">Branch Office</h3>
+             <p className="text-xs font-medium text-white mt-3">
+              HIMGIRI LOANS
             </p>
             <p className="text-xs leading-relaxed">
-              Section 8 Licence No: 159984
+              Bhuntar Bazar, Kullu, Himachal Pradesh
             </p>
-            <p className="text-xs leading-relaxed">
-              Address: Anjanvel Bouddhwadi, RGPPL Anjanvel, Guhagar,
-              Ratnagiri, Maharashtra 415634
+            
+            <div className="mt-3 space-y-1">
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Mobile:</span> +91 9718998780
+              </p>
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Business:</span> +91 8076520212
+              </p>
+              <p className="text-xs leading-relaxed">
+                <span className="font-medium text-gray-200">Phone:</span> +91 9816451000
+              </p>
+            </div>
+
+            <p className="text-xs leading-relaxed mt-3">
+              Email: enquiry.himcoinwealth@himgiriloans.in
             </p>
+            
+            
           </div>
 
         </div>
@@ -69,7 +94,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-6 text-center">
           <p className="text-xs">
-            © 2025 | Trisaran Money - All rights reserved
+            © 2025 | HIMGIRI LOANS - All rights reserved
           </p>
         </div>
       </div>

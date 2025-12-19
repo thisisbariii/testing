@@ -9,7 +9,7 @@ export default function TermsAndConditions() {
         </h1>
 
         <p className="text-gray-600 text-[16px] leading-relaxed mb-10">
-          Welcome to Trisaran Money. By accessing or using our services, you agree to
+          Welcome to Himgiri Loans. By accessing or using our services, you agree to
           the following Terms & Conditions. Please read them carefully before proceeding.
         </p>
 
@@ -47,7 +47,7 @@ export default function TermsAndConditions() {
         </h2>
 
         <p className="text-gray-600 mb-4">
-          Trisaran Money offers the following services through backed models:
+          Himgiri Loans offers the following services through backed models:
         </p>
 
         <p className="text-gray-600 mb-4">
@@ -134,7 +134,7 @@ export default function TermsAndConditions() {
         </h2>
 
         <p className="text-gray-600 mb-10">
-          All logos, content, branding, and technology used by Trisaran Money are
+          All logos, content, branding, and technology used by Himgiri Loans are
           proprietary. Unauthorized use or reproduction is strictly prohibited.
         </p>
 
@@ -155,7 +155,7 @@ export default function TermsAndConditions() {
         </h2>
 
         <p className="text-gray-600 mb-10">
-          Trisaran Money may update these Terms & Conditions at any time without prior
+          Himgiri Loans may update these Terms & Conditions at any time without prior
           notice. Continued use of services implies acceptance of the updated terms.
         </p>
 
@@ -165,16 +165,15 @@ export default function TermsAndConditions() {
         </h2>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-10">
-          <li>Email: contact@trisaranmoney.in</li>
-          <li>
-            Address: Anjanvel Bouddhwadi, RGPPL Anjanvel, Guhagar, Ratnagiri,
-            Maharashtra 415634
-          </li>
+          <li>Email: enquiry.himcoinwealth@himgiriloans.in</li>
+         <li>
+  Address: Bhuntar Bazar, Kullu, Himachal Pradesh 175125
+</li>
         </ul>
 
         {/* Footer Note */}
         <div className="bg-blue-100 text-blue-700 text-center px-6 py-4 rounded-lg">
-          By using Trisaran Money, you agree to these Terms & Conditions. Your trust and
+          By using Himgiri Loans, you agree to these Terms & Conditions. Your trust and
           cooperation help us build a stronger, more financially inclusive India.
         </div>
 

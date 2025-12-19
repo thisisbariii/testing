@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.jpeg";
 
 export default function Header() {
   const location = useLocation();
@@ -18,9 +19,13 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200 font-['Poppins']">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 md:h-24"> {/* Increased height even more on desktop */}
           <Link to="/" className="flex items-center gap-3" onClick={handleLinkClick}>
-            <img src="/assets/logo.webp" alt="Trisaran Money" className="h-10 w-auto" />
+            <img 
+              src={logo} 
+              alt="Himgiri Loans" 
+              className="h-10 md:h-20 w-auto" // h-20 for desktop (much bigger!)
+            />
           </Link>
 
           {/* Hamburger button for mobile */}
@@ -48,7 +53,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {[
               { path: "/", label: "Home" },
               { path: "/about", label: "About Us" },
@@ -56,7 +61,7 @@ export default function Header() {
               { path: "/terms", label: "Terms & Conditions" },
               { path: "/become-partner", label: "Become A Partner" },
             ].map((item) => (
-              <Link key={item.path} to={item.path} className="text-sm font-medium pb-1">
+              <Link key={item.path} to={item.path} className="text-base font-medium pb-1">
                 <span className={isActive(item.path)}>{item.label}</span>
               </Link>
             ))}
@@ -83,13 +88,6 @@ export default function Header() {
               <span className={isActive(item.path)}>{item.label}</span>
             </Link>
           ))}
-          {/* <Link
-            to="/advisor-login"
-            className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium mt-2"
-            onClick={handleLinkClick}
-          >
-            Advisor Login
-          </Link> */}
         </div>
       )}
     </header>

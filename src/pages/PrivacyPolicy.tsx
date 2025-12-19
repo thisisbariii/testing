@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         </h1>
 
         <p className="text-gray-600 text-[16px] leading-relaxed mb-10">
-          At Trisaran Money, we deeply value your trust and are committed to protecting
+          At Himgiri Loans, we deeply value your trust and are committed to protecting
           your personal and financial information. This Privacy Policy explains how
           we collect, use, store, and safeguard your data when you use our services.
         </p>
@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
 
         <p className="text-gray-600 mb-10">
           To exercise your rights, contact us at:{" "}
-          <span className="font-medium">contact@trisaranmoney.in</span>
+          <span className="font-medium">enquiry.himcoinwealth@himgiriloans.in</span>
         </p>
 
         {/* Section 6 */}
@@ -152,16 +152,15 @@ export default function PrivacyPolicy() {
         </p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-10">
-          <li>Email: contact@trisaranmoney.in</li>
-          <li>
-            Address: Anjanvel Bouddhwadi, RGPPL Anjanvel, Guhagar,
-            Ratnagiri, Maharashtra 415634
-          </li>
+          <li>Email: enquiry.himcoinwealth@himgiriloans.in</li>
+         <li>
+  Address: Bhuntar Bazar, Kullu, Himachal Pradesh 175125
+</li>
         </ul>
 
         {/* Footer Note */}
         <div className="bg-blue-100 text-blue-700 text-center px-6 py-4 rounded-lg">
-          Your privacy is our commitment. At Trisaran Money, we ensure your data stays
+          Your privacy is our commitment. At Himgiri Loans, we ensure your data stays
           secure, and your trust remains unshaken.
         </div>
 
