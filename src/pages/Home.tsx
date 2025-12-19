@@ -30,26 +30,26 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-20 mb-8 md:mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold leading-tight text-[#232625]/70">
-              Best Platform to sell <span className="text-green-500">Financial and Banking Services</span> online
-            </h1>
-            <p className="mt-4 text-gray-600 text-sm md:text-base">
-              Learn & Earn From Anywhere By Referring Customers And Educating Them On The Products Being Offered.
-            </p>
-            
-            {/* Responsive Hero Button */}
-            <button className="mt-6 md:mt-8 bg-blue-600 text-white px-8 md:px-10 py-3 rounded-full text-sm md:text-base font-medium hover:bg-blue-700 transition-all shadow-lg">
-              <span className="md:hidden">Download Now</span>
-              <span className="hidden md:block">Register Now</span>
-            </button>
-          </div>
-          <div className="flex items-center justify-center order-1 lg:order-2">
-            <img src="/assets/mobile-logo.webp" alt="App" className="w-[65%] md:w-[80%] h-auto" />
-          </div>
-        </div>
-      </section>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div className="text-center lg:text-left order-2 lg:order-1">
+      <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold leading-[1.2] md:leading-[1.1] text-[#232625]/70">
+        Best Platform to sell <span className="text-green-500">Financial and Banking Services</span> online
+      </h1>
+      <p className="mt-6 md:mt-8 text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+        Learn & Earn From Anywhere By Referring Customers And Educating Them On The Products Being Offered.
+      </p>
+      
+      {/* Responsive Hero Button */}
+      <button className="mt-10 md:mt-12 bg-blue-600 text-white px-10 md:px-12 py-3.5 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
+        <span className="md:hidden">Download Now</span>
+        <span className="hidden md:block">Register Now</span>
+      </button>
+    </div>
+    <div className="flex items-center justify-center order-1 lg:order-2">
+      <img src="/assets/mobile-logo.webp" alt="App" className="w-[65%] md:w-[80%] h-auto" />
+    </div>
+  </div>
+</section>
 
       {/* Grid Products */}
       <section className="py-10 md:py-12 bg-white mb-8 md:mb-16">
