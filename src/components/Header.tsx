@@ -73,12 +73,12 @@ export default function Header() {
               <span className={isActive(item.path)}>{item.label}</span>
             </Link>
           ))}
-          <Link
+          {/* <Link
             to="/advisor-login"
             className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium mt-2"
           >
             Advisor Login
-          </Link>
+          </Link> */}
         </div>
       )}
     </header>

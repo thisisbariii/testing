@@ -1,4 +1,5 @@
-import { HandCoins, Headset, Landmark, Star } from 'lucide-react';
+import { HandCoins, Headset, Landmark, Star, Phone } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function Home() {
@@ -28,10 +29,10 @@ export default function Home() {
     <div className="bg-white overflow-x-hidden font-['Poppins']">
       
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-10 md:py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-20 mb-8 md:mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-3xl md:text-[45px] font-semibold leading-tight text-[#232625]/70">
+            <h1 className="text-2xl sm:text-3xl md:text-[45px] font-semibold leading-tight text-[#232625]/70">
               Best Platform to sell <span className="text-green-500">Financial and Banking Services</span> online
             </h1>
             <p className="mt-4 text-gray-600 text-sm md:text-base">
@@ -39,7 +40,7 @@ export default function Home() {
             </p>
             
             {/* Responsive Hero Button */}
-            <button className="mt-8 bg-blue-600 text-white px-10 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-all shadow-lg">
+            <button className="mt-6 md:mt-8 bg-blue-600 text-white px-8 md:px-10 py-3 rounded-full text-sm md:text-base font-medium hover:bg-blue-700 transition-all shadow-lg">
               <span className="md:hidden">Download Now</span>
               <span className="hidden md:block">Register Now</span>
             </button>
@@ -51,9 +52,9 @@ export default function Home() {
       </section>
 
       {/* Grid Products */}
-      <section className="py-12 bg-white">
+      <section className="py-10 md:py-12 bg-white mb-8 md:mb-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-center text-gray-700 text-sm md:text-lg mb-10 px-4">
+          <h2 className="text-center text-gray-700 text-sm md:text-lg mb-8 md:mb-10 px-4">
             Bringing you the <span className="font-semibold text-gray-900">Best Products</span> from <span className="font-semibold text-gray-900">Top Banks</span>
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
@@ -71,19 +72,20 @@ export default function Home() {
               { name: "DEMAT ACCOUNT", icon: "demat-account.webp", bg: "bg-green-100" },
               { name: "INSURANCE", icon: "insurance.webp", bg: "bg-orange-100" },
             ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-4 md:p-6 bg-white rounded-xl border border-gray-50 shadow-sm">
-                <div className={`w-12 h-12 md:w-16 md:h-16 ${item.bg} rounded-xl flex items-center justify-center mb-4`}>
-                  <img src={`/assets/${item.icon}`} alt={item.name} className="w-6 h-6 md:w-10 md:h-10 object-contain" />
+              <div key={index} className="flex flex-col items-center text-center p-3 md:p-6 bg-white rounded-xl border border-gray-50 shadow-sm">
+                <div className={`w-10 h-10 md:w-16 md:h-16 ${item.bg} rounded-xl flex items-center justify-center mb-3 md:mb-4`}>
+                  <img src={`/assets/${item.icon}`} alt={item.name} className="w-5 h-5 md:w-10 md:h-10 object-contain" />
                 </div>
-                <span className="text-[9px] md:text-[10px] font-bold text-gray-700 tracking-wider uppercase">{item.name}</span>
+                <span className="text-[8px] md:text-[10px] font-bold text-gray-700 tracking-wider uppercase">{item.name}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-    <section className="bg-[#3b4758] pt-10 pb-32 relative overflow-hidden">
+      {/* Stats Section - Desktop stays same, only mobile improved */}
+     {/* Stats Section - Desktop stays same, only mobile improved */}
+<section className="bg-[#3b4758] pt-10 pb-24 md:pb-32 relative mb-8 md:mb-16">
   <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
     <div className="mb-8">
       <h2 className="text-xl md:text-2xl font-medium text-white mb-2">Millions of Wishes, Enabled!</h2>
@@ -92,7 +94,8 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
+    {/* Desktop stays same */}
+    <div className="hidden md:flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
       <div className="flex-1">
         <div className="text-3xl font-bold text-[#4ade80]">1,000Cr+</div>
         <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Loan Disbursement</div>
@@ -108,28 +111,49 @@ export default function Home() {
         <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Bank Partnerships</div>
       </div>
     </div>
+
+    {/* Mobile Improved - Better spacing and layout */}
+    <div className="md:hidden flex flex-col items-center space-y-8 mt-12 mb-20">
+      <div className="text-center">
+        <div className="text-4xl font-bold text-[#4ade80]">1,000Cr+</div>
+        <div className="text-xs text-gray-400 mt-2 uppercase tracking-widest">
+          LOAN DISBURSEMENT
+        </div>
+      </div>
+
+      <div className="text-center">
+        <div className="text-4xl font-bold text-[#4ade80]">100+</div>
+        <div className="text-xs text-gray-400 mt-2 uppercase tracking-widest">
+          DSA PARTNERS
+        </div>
+      </div>
+
+      <div className="text-center">
+        <div className="text-4xl font-bold text-[#4ade80]">80+</div>
+        <div className="text-xs text-gray-400 mt-2 uppercase tracking-widest">
+          BANK PARTNERSHIPS
+        </div>
+      </div>
+    </div>
   </div>
 
-  {/* Brand Bar */}
-  <div className="absolute left-1/2 -translate-x-1/2 bottom-[-30px] w-[90%] max-w-5xl bg-white rounded-xl shadow-xl py-5 overflow-hidden z-20">
-    <div className="flex animate-marquee whitespace-nowrap items-center gap-1 md:gap-16">
+  {/* Brand Bar - Fixed positioning for mobile */}
+  <div className="absolute left-1/2 -translate-x-1/2 bottom-[-20px] md:bottom-[-30px] w-[90%] max-w-5xl bg-white rounded-xl shadow-xl py-4 md:py-5 overflow-hidden z-20">
+    <div className="flex animate-marquee whitespace-nowrap items-center gap-4 md:gap-16">
       {[...Array(2)].map((_, set) => (
-        <div key={set} className="flex items-center gap-1 md:gap-16 px-4 min-w-max">
+        <div key={set} className="flex items-center gap-4 md:gap-16 px-4 min-w-max">
           {['kotak','bajaj','idfc','b','l','h','axis','aditya'].map((img) => (
             <img 
               key={img} 
               src={`/assets/${img}.webp`} 
               alt={img} 
-              className="h-9 md:h-14 w-auto object-contain flex-shrink-0"
+              className="h-8 md:h-14 w-auto object-contain flex-shrink-0"
             />
           ))}
         </div>
       ))}
     </div>
   </div>
-
-  {/* Mobile gradient overlay for clarity */}
-  <div className="absolute inset-0 bg-gradient-to-t from-[#3b4758] via-[#3b4758]/50 to-transparent z-0 md:hidden"></div>
 
   {/* Keyframes animation for infinite scroll */}
   <style>
@@ -146,251 +170,268 @@ export default function Home() {
   </style>
 </section>
 
-
       {/* EMI Calculator */}
-<section className="py-20 md:py-28 bg-white font-poppins flex items-center justify-center overflow-visible">
-  <div className="max-w-7xl mx-auto px-6 w-full">
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-36">
+      <section className="py-16 md:py-28 bg-white font-poppins flex items-center justify-center overflow-visible mb-8 md:mb-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-36">
 
-      {/* TEXT CONTENT — FIRST ON MOBILE */}
-      <div className="order-1 lg:order-2 text-center lg:text-left max-w-lg">
-        <h2 className="text-4xl lg:text-[46px] font-bold text-[#1a2b49] mb-6 leading-tight tracking-tight">
-          EMI Calculator
-        </h2>
-        <p className="text-gray-500 text-lg leading-relaxed mb-10">
-          Measure twice, cut once. Calculate your monthly outflow before you take a decision.
-        </p>
-        
-        <div className="inline-flex lg:flex items-start gap-6 border-l-4 border-[#3bb54a] pl-6 py-2 text-left">
-          <div>
-            <h4 className="text-xl font-bold text-[#1a2b49] mb-1">
-              Loan EMI Calculator
-            </h4>
-            <p className="text-gray-500 text-sm md:text-base">
-              Calculate how much it will take to enable short-term liquidity.
-            </p>
+            {/* TEXT CONTENT — FIRST ON MOBILE */}
+            <div className="order-1 lg:order-2 text-center lg:text-left max-w-lg">
+              <h2 className="text-2xl sm:text-3xl lg:text-[46px] font-bold text-[#1a2b49] mb-4 md:mb-6 leading-tight">
+                EMI Calculator
+              </h2>
+              <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 md:mb-10">
+                Measure twice, cut once. Calculate your monthly outflow before you take a decision.
+              </p>
+              
+              <div className="inline-flex lg:flex items-start gap-4 md:gap-6 border-l-4 border-[#3bb54a] pl-4 md:pl-6 py-2 text-left">
+                <div>
+                  <h4 className="text-lg md:text-xl font-bold text-[#1a2b49] mb-1">
+                    Loan EMI Calculator
+                  </h4>
+                  <p className="text-gray-500 text-sm md:text-base">
+                    Calculate how much it will take to enable short-term liquidity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CALCULATOR — SECOND ON MOBILE */}
+            <div className="order-2 lg:order-1 relative w-full max-w-[440px]">
+              <div className="bg-white rounded-xl py-8 md:py-16 px-6 md:px-10 md:pr-24 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] md:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50/50">
+                <div className="mb-8 md:mb-10">
+                  <p className="text-[11px] md:text-[12px] font-bold text-gray-400 uppercase tracking-widest mb-1">
+                    EMI Calculator for
+                  </p>
+                  <h4 className="text-xl md:text-2xl font-extrabold text-[#1a2b49]">LOAN</h4>
+                </div>
+
+                <div className="space-y-10 md:space-y-12">
+                  {[
+                    { label: 'Loan Amount', val: loanAmount, set: setLoanAmount, min: 100000, max: 10000000, unit: '₹' },
+                    { label: 'Interest Rate (%)', val: interestRate, set: setInterestRate, min: 1, max: 20, unit: '%' },
+                    { label: 'Tenure (months)', val: tenure, set: setTenure, min: 1, max: 360, unit: '' }
+                  ].map((item) => (
+                    <div key={item.label} className="relative">
+                      <div className="flex justify-between text-sm md:text-[15px] font-medium text-gray-500 mb-3 md:mb-4">
+                        <span>{item.label}</span>
+                        <span className="text-gray-900 font-bold pr-2">
+                          {item.unit === '₹' ? '₹' : ''}
+                          {item.val.toLocaleString('en-IN')}
+                          {item.unit === '%' ? '%' : ''}
+                        </span>
+                      </div>
+                      <input
+                        type="range"
+                        min={item.min}
+                        max={item.max}
+                        value={item.val}
+                        onChange={(e) => item.set(+e.target.value)}
+                        className="w-full accent-[#3bb54a] h-[6px] bg-gray-100 rounded-full appearance-none cursor-pointer"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Mobile EMI Box */}
+                <div className="mt-8 md:mt-10 lg:hidden p-4 md:p-5 bg-green-50/50 rounded-xl text-center border border-green-100">
+                  <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase tracking-wider">
+                    Monthly EMI
+                  </p>
+                  <p className="text-2xl md:text-3xl font-bold text-[#3bb54a]">
+                    ₹{calculateEMI().toLocaleString('en-IN')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop Floating Box */}
+              <div className="hidden lg:block absolute top-1/2 -right-8 -translate-y-1/2 bg-white rounded-xl px-4 py-6 text-center shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-gray-50 z-30 min-w-[140px]">
+                <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase">
+                  Monthly EMI
+                </p>
+                <p className="text-[24px] font-bold text-[#3bb54a] leading-tight">
+                  ₹{calculateEMI().toLocaleString('en-IN')}
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* CALCULATOR — SECOND ON MOBILE */}
-      <div className="order-2 lg:order-1 relative w-full max-w-[440px]">
-        <div className="bg-white rounded-xl py-12 md:py-16 px-10 md:pr-24 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50/50">
-          <div className="mb-10">
-            <p className="text-[12px] font-bold text-gray-400 uppercase tracking-widest mb-1">
-              EMI Calculator for
-            </p>
-            <h4 className="text-2xl font-extrabold text-[#1a2b49]">LOAN</h4>
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-20 bg-white mb-8 md:mb-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
+          
+          {/* Heading */}
+          <h2 className="text-2xl md:text-[42px] font-semibold text-[#1a2b49] leading-tight">
+            Why is Trisaran the <span className="text-[#3bb54a]">#1</span> trusted
+            <br className="hidden md:block" />
+            financial brand across India
+          </h2>
+
+          {/* Green underline */}
+          <div className="w-14 h-[3px] bg-[#3bb54a] mx-auto mt-4 md:mt-6 mb-12 md:mb-16 rounded-full" />
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+            {/* Card 1 */}
+            <div className="bg-[#ecfeff] rounded-2xl px-6 md:px-8 py-8 md:py-10 shadow-sm">
+              <div className="mb-6 flex justify-center">
+                <Landmark className="w-12 h-12 md:w-14 md:h-14 text-[#1a2b49]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-base md:text-lg font-semibold text-[#1a2b49] mb-3">
+                Trusted Banking Partnerships
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Collaborate with leading banks to build credibility and expand your
+                business reach.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#eff6ff] rounded-2xl px-6 md:px-8 py-8 md:py-10 shadow-sm">
+              <div className="mb-6 flex justify-center">
+                <HandCoins className="w-12 h-12 md:w-14 md:h-14 text-[#1a2b49]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-base md:text-lg font-semibold text-[#1a2b49] mb-3">
+                High Payouts for Our Partners
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Enjoy higher returns with clear, transparent payout structures and
+                reliable support.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#f0fdf4] rounded-2xl px-6 md:px-8 py-8 md:py-10 shadow-sm">
+              <div className="mb-6 flex justify-center">
+                <Headset className="w-12 h-12 md:w-14 md:h-14 text-[#1a2b49]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-base md:text-lg font-semibold text-[#1a2b49] mb-3">
+                Dedicated Guidance & Support
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We understand your unique goals and guide you toward sustainable
+                success.
+              </p>
+            </div>
+
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-12">
-            {[
-              { label: 'Loan Amount', val: loanAmount, set: setLoanAmount, min: 100000, max: 10000000, unit: '₹' },
-              { label: 'Interest Rate (%)', val: interestRate, set: setInterestRate, min: 1, max: 20, unit: '%' },
-              { label: 'Tenure (months)', val: tenure, set: setTenure, min: 1, max: 360, unit: '' }
-            ].map((item) => (
-              <div key={item.label} className="relative">
-                <div className="flex justify-between text-[15px] font-medium text-gray-500 mb-4">
-                  <span>{item.label}</span>
-                  <span className="text-gray-900 font-bold pr-2">
-                    {item.unit === '₹' ? '₹' : ''}
-                    {item.val.toLocaleString('en-IN')}
-                    {item.unit === '%' ? '%' : ''}
-                  </span>
+      {/* Success Stories */}
+      <section className="py-16 md:py-20 overflow-hidden mb-8 md:mb-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#000000] mb-8 md:mb-12">
+          Trisaran Money's Success Stories
+        </h2>
+
+        <div className="relative w-full overflow-hidden group">
+          <div className="flex w-max gap-6 md:gap-8 animate-infinite-scroll-fast will-change-transform group-hover:[animation-play-state:paused]">
+            {[...allReviews, ...allReviews].map((rev, i) => (
+              <div
+                key={i}
+                className="w-[280px] md:w-[380px] flex-shrink-0 bg-white rounded-[24px] md:rounded-[28px] p-5 md:p-6 shadow-sm border border-gray-100"
+              >
+                <p className="text-gray-600 italic text-sm mb-4 md:mb-5 leading-relaxed">
+                  "{rev.text}"
+                </p>
+
+                <div className="w-full h-px bg-gray-100 mb-4" />
+
+                <h4 className="text-[#3bb54a] font-medium mb-1">
+                  {rev.name}
+                </h4>
+
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, j) => (
+                    <Star
+                      key={j}
+                      className="w-3 h-3 fill-[#ffcc00] text-[#ffcc00]"
+                    />
+                  ))}
                 </div>
-                <input
-                  type="range"
-                  min={item.min}
-                  max={item.max}
-                  value={item.val}
-                  onChange={(e) => item.set(+e.target.value)}
-                  className="w-full accent-[#3bb54a] h-[6px] bg-gray-100 rounded-full appearance-none cursor-pointer"
-                />
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Mobile EMI Box */}
-          <div className="mt-10 lg:hidden p-5 bg-green-50/50 rounded-xl text-center border border-green-100">
-            <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase tracking-wider">
-              Monthly EMI
+      {/* REQUIRED STYLES */}
+      <style>{`
+        @keyframes infinite-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-infinite-scroll-fast {
+          animation: infinite-scroll 35s linear infinite;
+        }
+      `}</style>
+
+      {/* CTA Section */}
+      <section className="w-full bg-white py-10 md:py-20 font-poppins">
+        <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[40px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-12 md:py-20">
+
+          {/* Content Area */}
+          <div className="z-20 w-full md:w-3/5 px-6 md:px-24 flex flex-col items-center md:items-start">
+            <h2 className="text-white text-xl md:text-[38px] font-normal leading-[1.15] mb-2 tracking-tight text-center md:text-left">
+              Register as a Trisaran Partner
+            </h2>
+
+            <p className="text-white/90 text-sm md:text-[22px] mb-6 md:mb-10 font-normal text-center md:text-left">
+              Grow your business. Grow your career
             </p>
-            <p className="text-3xl font-bold text-[#3bb54a]">
-              ₹{calculateEMI().toLocaleString('en-IN')}
-            </p>
+
+            <button className="bg-white text-black px-6 md:px-12 py-3 rounded-full text-sm md:text-[17px] font-medium hover:bg-gray-100 transition-all shadow-sm">
+              <span className="md:hidden">Download Now</span>
+              <span className="hidden md:inline">Register Now</span>
+            </button>
           </div>
+
+          {/* Handshake Image - Hidden on Mobile, visible on md+ */}
+          <div className="hidden md:flex md:absolute md:right-0 md:bottom-0 md:h-auto md:w-1/2 justify-end items-end pointer-events-none z-10">
+            <img
+              src="/assets/shake.webp"
+              alt="Partner Handshake"
+              className="h-auto max-h-[250px] md:max-h-[300px] w-auto object-contain object-right-bottom mr-6 md:mr-20 lg:mr-32"
+            />
+          </div>
+
+          {/* Mobile Gradient for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3b4758] via-[#3b4758]/30 to-transparent md:hidden z-15"></div>
         </div>
+      </section>
 
-        {/* Desktop Floating Box */}
-        <div className="hidden lg:block absolute top-1/2 -right-8 -translate-y-1/2 bg-white rounded-xl px-4 py-6 text-center shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-gray-50 z-30 min-w-[140px]">
-          <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase">
-            Monthly EMI
-          </p>
-          <p className="text-[24px] font-bold text-[#3bb54a] leading-tight">
-            ₹{calculateEMI().toLocaleString('en-IN')}
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    
-    
-
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6 text-center">
-    
-    {/* Heading */}
-    <h2 className="text-3xl md:text-[42px] font-semibold text-[#1a2b49] leading-tight">
-      Why is Trisaran the <span className="text-[#3bb54a]">#1</span> trusted
-      <br className="hidden md:block" />
-      financial brand across India
-    </h2>
-
-    {/* Green underline */}
-    <div className="w-14 h-[3px] bg-[#3bb54a] mx-auto mt-6 mb-16 rounded-full" />
-
-    {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      {/* Card 1 */}
-      <div className="bg-[#ecfeff] rounded-2xl px-8 py-10 shadow-sm">
-        <div className="mb-6 flex justify-center">
-          <Landmark className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
-        </div>
-        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
-          Trusted Banking Partnerships
-        </h3>
-        <p className="text-gray-600 text-sm leading-relaxed">
-          Collaborate with leading banks to build credibility and expand your
-          business reach.
-        </p>
-      </div>
-
-      {/* Card 2 */}
-      <div className="bg-[#eff6ff] rounded-2xl px-8 py-10 shadow-sm">
-        <div className="mb-6 flex justify-center">
-          <HandCoins className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
-        </div>
-        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
-          High Payouts for Our Partners
-        </h3>
-        <p className="text-gray-600 text-sm leading-relaxed">
-          Enjoy higher returns with clear, transparent payout structures and
-          reliable support.
-        </p>
-      </div>
-
-      {/* Card 3 */}
-      <div className="bg-[#f0fdf4] rounded-2xl px-8 py-10 shadow-sm">
-        <div className="mb-6 flex justify-center">
-          <Headset className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
-        </div>
-        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
-          Dedicated Guidance & Support
-        </h3>
-        <p className="text-gray-600 text-sm leading-relaxed">
-          We understand your unique goals and guide you toward sustainable
-          success.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
- {/* Success Stories */}
-<section className="py-20 overflow-hidden">
-  <h2 className="text-3xl font-bold text-center text-[#000000] mb-12">
-   Trisaran Money's Success Stories
-  </h2>
-
-  <div className="relative w-full overflow-hidden group">
-    <div className="flex w-max gap-8 animate-infinite-scroll-fast will-change-transform group-hover:[animation-play-state:paused]">
-      {[...allReviews, ...allReviews].map((rev, i) => (
-        <div
-          key={i}
-          className="w-[300px] md:w-[380px] flex-shrink-0 bg-white rounded-[28px] p-6 shadow-sm border border-gray-100"
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        {/* WhatsApp Button with proper WhatsApp icon */}
+        <a
+          href="https://wa.me/918881791704"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#25D366] text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20BA5A] transition-all hover:scale-110"
+          aria-label="Contact on WhatsApp"
         >
-          <p className="text-gray-600 italic text-sm mb-5 leading-relaxed">
-            "{rev.text}"
-          </p>
+          <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7" />
+        </a>
 
-          <div className="w-full h-px bg-gray-100 mb-4" />
-
-          <h4 className="text-[#3bb54a] font-medium mb-1">
-            {rev.name}
-          </h4>
-
-          <div className="flex gap-1">
-            {[...Array(5)].map((_, j) => (
-              <Star
-                key={j}
-                className="w-3 h-3 fill-[#ffcc00] text-[#ffcc00]"
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* REQUIRED STYLES */}
-<style>{`
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-infinite-scroll-fast {
-  animation: infinite-scroll 16s linear infinite;
-}
-`}</style>
-
-<section className="w-full bg-white py-12 md:py-20 font-poppins">
-  <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-16 md:py-20">
-
-    {/* Content Area */}
-    <div className="z-20 w-full md:w-3/5 px-6 md:px-24 flex flex-col items-start">
-      <h2 className="text-white text-2xl md:text-[38px] font-normal leading-[1.15] mb-2 tracking-tight">
-        Register as a Trisaran Partner
-      </h2>
-
-      <p className="text-white/90 text-base md:text-[22px] mb-6 md:mb-10 font-normal">
-        Grow your business. Grow your career
-      </p>
-
-      <button className="bg-white text-black px-8 md:px-12 py-3 rounded-full text-[15px] md:text-[17px] font-medium hover:bg-gray-100 transition-all shadow-sm">
-        Register Now
-      </button>
-    </div>
-
-    {/* Handshake Image - Hidden on Mobile, visible on md+ */}
-    <div className="hidden md:flex md:absolute md:right-0 md:bottom-0 md:h-auto md:w-1/2 justify-end items-end pointer-events-none z-10">
-      <img
-        src="/assets/shake.webp"
-        alt="Partner Handshake"
-        className="h-auto max-h-[250px] md:max-h-[300px] w-auto object-contain object-right-bottom mr-6 md:mr-20 lg:mr-32"
-      />
-    </div>
-
-    {/* Mobile Gradient for readability */}
-    <div className="absolute inset-0 bg-gradient-to-r from-[#3b4758] via-[#3b4758]/30 to-transparent md:hidden z-15"></div>
-  </div>
-</section>
+        {/* Phone Call Button */}
+        <a
+          href="tel:+918881791704"
+          className="bg-[#3b82f6] text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#2563eb] transition-all hover:scale-110"
+          aria-label="Call us"
+        >
+          <Phone className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" />
+        </a>
+      </div>
 
     </div>  
-
-    
   );
 }
-
- 
