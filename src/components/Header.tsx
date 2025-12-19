@@ -42,32 +42,37 @@ export default function Header() {
             </button>
           </div>
 
+          {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className={`text-sm font-medium pb-1 ${isActive("/")}`}>Home</Link>
-            <Link to="/about" className={`text-sm font-medium pb-1 ${isActive("/about")}`}>About Us</Link>
-            <Link to="/privacy" className={`text-sm font-medium pb-1 ${isActive("/privacy")}`}>Privacy Policy</Link>
-            <Link to="/terms" className={`text-sm font-medium pb-1 ${isActive("/terms")}`}>Terms & Conditions</Link>
-            <Link to="/become-partner" className={`text-sm font-medium pb-1 ${isActive("/become-partner")}`}>Become A Partner</Link>
+            {[
+              { path: "/", label: "Home" },
+              { path: "/about", label: "About Us" },
+              { path: "/privacy", label: "Privacy Policy" },
+              { path: "/terms", label: "Terms & Conditions" },
+              { path: "/become-partner", label: "Become A Partner" },
+            ].map((item) => (
+              <Link key={item.path} to={item.path} className="text-sm font-medium pb-1">
+                <span className={isActive(item.path)}>{item.label}</span>
+              </Link>
+            ))}
           </nav>
-
-         <Link
-  to="/advisor-login"
-  className="hidden md:inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition"
->
-  Advisor Login
-</Link>
-
         </div>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4">
-          <Link to="/" className={`block py-2 ${isActive("/")}`}>Home</Link>
-          <Link to="/about" className={`block py-2 ${isActive("/about")}`}>About Us</Link>
-          <Link to="/privacy" className={`block py-2 ${isActive("/privacy")}`}>Privacy Policy</Link>
-          <Link to="/terms" className={`block py-2 ${isActive("/terms")}`}>Terms & Conditions</Link>
-          <Link to="/become-partner" className={`block py-2 ${isActive("/become-partner")}`}>Become A Partner</Link>
+        <div className="md:hidden px-4 pb-4 flex flex-col gap-1">
+          {[
+            { path: "/", label: "Home" },
+            { path: "/about", label: "About Us" },
+            { path: "/privacy", label: "Privacy Policy" },
+            { path: "/terms", label: "Terms & Conditions" },
+            { path: "/become-partner", label: "Become A Partner" },
+          ].map((item) => (
+            <Link key={item.path} to={item.path} className="block py-2">
+              <span className={isActive(item.path)}>{item.label}</span>
+            </Link>
+          ))}
           <Link
             to="/advisor-login"
             className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium mt-2"

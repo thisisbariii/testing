@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { HandCoins, Headset, Landmark, Star } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -83,63 +83,103 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#3b4758] pt-10 pb-20 relative">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="mb-8">
-            <h2 className="text-xl md:text-2xl font-medium text-white mb-2">Millions of Wishes, Enabled!</h2>
-            <p className="text-gray-300 text-[10px] md:text-xs">We achieve such numbers, because you are more than a number to us.</p>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
-            <div className="flex-1">
-              <div className="text-3xl font-bold text-[#4ade80]">1,000Cr+</div>
-              <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Loan Disbursement</div>
-            </div>
-            <div className="hidden md:block h-12 border-l border-dotted border-gray-500 mx-8 opacity-50"></div>
-            <div className="flex-1">
-              <div className="text-3xl font-bold text-[#4ade80]">100+</div>
-              <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">DSA partners</div>
-            </div>
-            <div className="hidden md:block h-12 border-l border-dotted border-gray-500 mx-8 opacity-50"></div>
-            <div className="flex-1">
-              <div className="text-3xl font-bold text-[#4ade80]">80+</div>
-              <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Bank Partnerships</div>
-            </div>
-          </div>
-        </div>
+    <section className="bg-[#3b4758] pt-10 pb-32 relative overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+    <div className="mb-8">
+      <h2 className="text-xl md:text-2xl font-medium text-white mb-2">Millions of Wishes, Enabled!</h2>
+      <p className="text-gray-300 text-[10px] md:text-xs">
+        We achieve such numbers, because you are more than a number to us.
+      </p>
+    </div>
 
-        {/* Brand Bar */}
-        {/* Brand Bar - Restored Color and Spacing */}
-<div className="absolute left-1/2 -translate-x-1/2 bottom-[-30px] w-[90%] max-w-5xl bg-white rounded-xl shadow-xl py-5 overflow-hidden z-20">
-  <div className="flex animate-infinite-scroll whitespace-nowrap items-center">
-     {[1,2].map((set) => (
-      <div key={set} className="flex items-center gap-10 md:gap-16 px-4 min-w-max">
-        {['kotak','bajaj','idfc','b','l','h','axis','aditya'].map((img) => (
-          <img 
-            key={img} 
-            src={`/assets/${img}.webp`} 
-            alt={img} 
-            className="h-9 md:h-14 w-auto object-contain flex-shrink-0" 
-            /* Removed grayscale and opacity filters */
-          />
-        ))}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
+      <div className="flex-1">
+        <div className="text-3xl font-bold text-[#4ade80]">1,000Cr+</div>
+        <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Loan Disbursement</div>
       </div>
-     ))}
+      <div className="hidden md:block h-12 border-l border-dotted border-gray-500 mx-8 opacity-50"></div>
+      <div className="flex-1">
+        <div className="text-3xl font-bold text-[#4ade80]">100+</div>
+        <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">DSA partners</div>
+      </div>
+      <div className="hidden md:block h-12 border-l border-dotted border-gray-500 mx-8 opacity-50"></div>
+      <div className="flex-1">
+        <div className="text-3xl font-bold text-[#4ade80]">80+</div>
+        <div className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">Bank Partnerships</div>
+      </div>
+    </div>
   </div>
-</div>
-      </section>
+
+  {/* Brand Bar */}
+  <div className="absolute left-1/2 -translate-x-1/2 bottom-[-30px] w-[90%] max-w-5xl bg-white rounded-xl shadow-xl py-5 overflow-hidden z-20">
+    <div className="flex animate-marquee whitespace-nowrap items-center gap-1 md:gap-16">
+      {[...Array(2)].map((_, set) => (
+        <div key={set} className="flex items-center gap-1 md:gap-16 px-4 min-w-max">
+          {['kotak','bajaj','idfc','b','l','h','axis','aditya'].map((img) => (
+            <img 
+              key={img} 
+              src={`/assets/${img}.webp`} 
+              alt={img} 
+              className="h-9 md:h-14 w-auto object-contain flex-shrink-0"
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Mobile gradient overlay for clarity */}
+  <div className="absolute inset-0 bg-gradient-to-t from-[#3b4758] via-[#3b4758]/50 to-transparent z-0 md:hidden"></div>
+
+  {/* Keyframes animation for infinite scroll */}
+  <style>
+    {`
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        display: flex;
+        animation: marquee 20s linear infinite;
+      }
+    `}
+  </style>
+</section>
+
 
       {/* EMI Calculator */}
-
 <section className="py-20 md:py-28 bg-white font-poppins flex items-center justify-center overflow-visible">
   <div className="max-w-7xl mx-auto px-6 w-full">
     <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-36">
-      
-      {/* Calculator Container */}
-      <div className="relative w-full max-w-[440px]">
-        {/* Main Card: md:pr-24 provides space for the overlapping box */}
+
+      {/* TEXT CONTENT — FIRST ON MOBILE */}
+      <div className="order-1 lg:order-2 text-center lg:text-left max-w-lg">
+        <h2 className="text-4xl lg:text-[46px] font-bold text-[#1a2b49] mb-6 leading-tight tracking-tight">
+          EMI Calculator
+        </h2>
+        <p className="text-gray-500 text-lg leading-relaxed mb-10">
+          Measure twice, cut once. Calculate your monthly outflow before you take a decision.
+        </p>
+        
+        <div className="inline-flex lg:flex items-start gap-6 border-l-4 border-[#3bb54a] pl-6 py-2 text-left">
+          <div>
+            <h4 className="text-xl font-bold text-[#1a2b49] mb-1">
+              Loan EMI Calculator
+            </h4>
+            <p className="text-gray-500 text-sm md:text-base">
+              Calculate how much it will take to enable short-term liquidity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CALCULATOR — SECOND ON MOBILE */}
+      <div className="order-2 lg:order-1 relative w-full max-w-[440px]">
         <div className="bg-white rounded-xl py-12 md:py-16 px-10 md:pr-24 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-gray-50/50">
           <div className="mb-10">
-            <p className="text-[12px] font-bold text-gray-400 uppercase tracking-widest mb-1">EMI Calculator for</p>
+            <p className="text-[12px] font-bold text-gray-400 uppercase tracking-widest mb-1">
+              EMI Calculator for
+            </p>
             <h4 className="text-2xl font-extrabold text-[#1a2b49]">LOAN</h4>
           </div>
 
@@ -152,15 +192,16 @@ export default function Home() {
               <div key={item.label} className="relative">
                 <div className="flex justify-between text-[15px] font-medium text-gray-500 mb-4">
                   <span>{item.label}</span>
-                  {/* pr-2 ensures numbers stay left of the floating box overlap */}
                   <span className="text-gray-900 font-bold pr-2">
-                    {item.unit === '₹' ? '₹' : ''}{item.val.toLocaleString('en-IN')}{item.unit === '%' ? '%' : ''}
+                    {item.unit === '₹' ? '₹' : ''}
+                    {item.val.toLocaleString('en-IN')}
+                    {item.unit === '%' ? '%' : ''}
                   </span>
                 </div>
-                <input 
-                  type="range" 
-                  min={item.min} 
-                  max={item.max} 
+                <input
+                  type="range"
+                  min={item.min}
+                  max={item.max}
                   value={item.val}
                   onChange={(e) => item.set(+e.target.value)}
                   className="w-full accent-[#3bb54a] h-[6px] bg-gray-100 rounded-full appearance-none cursor-pointer"
@@ -169,38 +210,25 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Mobile View Result Box */}
+          {/* Mobile EMI Box */}
           <div className="mt-10 lg:hidden p-5 bg-green-50/50 rounded-xl text-center border border-green-100">
-             <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase tracking-wider">Monthly EMI</p>
-             <p className="text-3xl font-bold text-[#3bb54a]">₹{calculateEMI().toLocaleString('en-IN')}</p>
+            <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase tracking-wider">
+              Monthly EMI
+            </p>
+            <p className="text-3xl font-bold text-[#3bb54a]">
+              ₹{calculateEMI().toLocaleString('en-IN')}
+            </p>
           </div>
         </div>
 
-        {/* REFINED OVERLAPPING BOX:
-            1. Narrowed (min-w-[140px])
-            2. Shifted further left (-right-8) to overlap properly
-            3. Reduced padding for a tighter "Real" look
-        */}
+        {/* Desktop Floating Box */}
         <div className="hidden lg:block absolute top-1/2 -right-8 -translate-y-1/2 bg-white rounded-xl px-4 py-6 text-center shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-gray-50 z-30 min-w-[140px]">
-          <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase">Monthly EMI</p>
+          <p className="text-[11px] text-gray-500 font-bold mb-1 uppercase">
+            Monthly EMI
+          </p>
           <p className="text-[24px] font-bold text-[#3bb54a] leading-tight">
             ₹{calculateEMI().toLocaleString('en-IN')}
           </p>
-        </div>
-      </div>
-
-      {/* Text Content Area */}
-      <div className="text-center lg:text-left max-w-lg">
-        <h2 className="text-4xl lg:text-[46px] font-bold text-[#1a2b49] mb-6 leading-tight tracking-tight">EMI Calculator</h2>
-        <p className="text-gray-500 text-lg leading-relaxed mb-10">
-          Measure twice, cut once. Calculate your monthly outflow before you take a decision.
-        </p>
-        
-        <div className="inline-flex lg:flex items-start gap-6 border-l-4 border-[#3bb54a] pl-6 py-2 text-left">
-          <div>
-            <h4 className="text-xl font-bold text-[#1a2b49] mb-1">Loan EMI Calculator</h4>
-            <p className="text-gray-500 text-sm md:text-base">Calculate how much it will take to enable short-term liquidity.</p>
-          </div>
         </div>
       </div>
 
@@ -208,25 +236,125 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Success Stories */}
-      <section className="py-20 overflow-hidden">
-        <h2 className="text-3xl font-bold text-center text-[#1a2b49] mb-12">Success Stories</h2>
-        <div className="flex animate-infinite-scroll-slow gap-8">
-          {[...allReviews, ...allReviews].map((rev, i) => (
-            <div key={i} className="w-[300px] md:w-[400px] flex-shrink-0 bg-white rounded-[32px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-50">
-              <p className="text-gray-600 italic text-sm mb-6 leading-relaxed">"{rev.text}"</p>
-              <div className="w-full h-[1px] bg-gray-100 mb-5" />
-              <h4 className="text-[#3bb54a] font-medium mb-1">{rev.name}</h4>
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-[#ffcc00] text-[#ffcc00]" />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+    
+    
 
-      {/* Partner Section - FIXED PROPORTIONS */}
-      
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    
+    {/* Heading */}
+    <h2 className="text-3xl md:text-[42px] font-semibold text-[#1a2b49] leading-tight">
+      Why is Trisaran the <span className="text-[#3bb54a]">#1</span> trusted
+      <br className="hidden md:block" />
+      financial brand across India
+    </h2>
+
+    {/* Green underline */}
+    <div className="w-14 h-[3px] bg-[#3bb54a] mx-auto mt-6 mb-16 rounded-full" />
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {/* Card 1 */}
+      <div className="bg-[#ecfeff] rounded-2xl px-8 py-10 shadow-sm">
+        <div className="mb-6 flex justify-center">
+          <Landmark className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
+        </div>
+        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
+          Trusted Banking Partnerships
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          Collaborate with leading banks to build credibility and expand your
+          business reach.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-[#eff6ff] rounded-2xl px-8 py-10 shadow-sm">
+        <div className="mb-6 flex justify-center">
+          <HandCoins className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
+        </div>
+        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
+          High Payouts for Our Partners
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          Enjoy higher returns with clear, transparent payout structures and
+          reliable support.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-[#f0fdf4] rounded-2xl px-8 py-10 shadow-sm">
+        <div className="mb-6 flex justify-center">
+          <Headset className="w-14 h-14 text-[#1a2b49]" strokeWidth={1.5} />
+        </div>
+        <h3 className="text-lg font-semibold text-[#1a2b49] mb-3">
+          Dedicated Guidance & Support
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          We understand your unique goals and guide you toward sustainable
+          success.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ {/* Success Stories */}
+<section className="py-20 overflow-hidden">
+  <h2 className="text-3xl font-bold text-center text-[#000000] mb-12">
+   Trisaran Money's Success Stories
+  </h2>
+
+  <div className="relative w-full overflow-hidden group">
+    <div className="flex w-max gap-8 animate-infinite-scroll-fast will-change-transform group-hover:[animation-play-state:paused]">
+      {[...allReviews, ...allReviews].map((rev, i) => (
+        <div
+          key={i}
+          className="w-[300px] md:w-[380px] flex-shrink-0 bg-white rounded-[28px] p-6 shadow-sm border border-gray-100"
+        >
+          <p className="text-gray-600 italic text-sm mb-5 leading-relaxed">
+            "{rev.text}"
+          </p>
+
+          <div className="w-full h-px bg-gray-100 mb-4" />
+
+          <h4 className="text-[#3bb54a] font-medium mb-1">
+            {rev.name}
+          </h4>
+
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, j) => (
+              <Star
+                key={j}
+                className="w-3 h-3 fill-[#ffcc00] text-[#ffcc00]"
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* REQUIRED STYLES */}
+<style>{`
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll-fast {
+  animation: infinite-scroll 16s linear infinite;
+}
+`}</style>
+
 <section className="w-full bg-white py-12 md:py-20 font-poppins">
   <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-16 md:py-20">
 
@@ -245,8 +373,8 @@ export default function Home() {
       </button>
     </div>
 
-    {/* Handshake Image */}
-    <div className="absolute right-0 bottom-0 h-auto w-1/2 md:w-1/2 flex justify-end items-end pointer-events-none z-10">
+    {/* Handshake Image - Hidden on Mobile, visible on md+ */}
+    <div className="hidden md:flex md:absolute md:right-0 md:bottom-0 md:h-auto md:w-1/2 justify-end items-end pointer-events-none z-10">
       <img
         src="/assets/shake.webp"
         alt="Partner Handshake"
@@ -259,13 +387,10 @@ export default function Home() {
   </div>
 </section>
 
+    </div>  
 
-      <style>{`
-        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .animate-infinite-scroll { animation: scroll 30s linear infinite; }
-        .animate-infinite-scroll-slow { animation: scroll 50s linear infinite; }
-      `}</style>
-
-    </div>
+    
   );
 }
+
+ 

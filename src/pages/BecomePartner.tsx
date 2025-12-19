@@ -198,33 +198,77 @@ export default function BecomePartner() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What our Partners say
-            </h2>
-            <div className="w-16 h-1 bg-green-500 mx-auto"></div>
+       <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What our Trisaran Partners say
+          </h2>
+          <div className="w-16 h-1 bg-green-500 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Testimonial 1 - Aakash Saxena */}
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <p className="text-gray-600 leading-relaxed mb-6">
+              I joined Trisaran 5 months ago. The app is very user friendly and the personalized website and marketing features helped me get more customers. The partner support team is very supportive and cooperative as well. All my queries have been resolved by them quickly.
+            </p>
+            <div className="flex items-center gap-4">
+              <img 
+                src="/assets/aakash.png" 
+                alt="Aakash Saxena" 
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="font-semibold text-gray-900">Aakash Saxena</h3>
+                <p className="text-sm text-gray-500">Trisaran Certified Partner</p>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Testimonial 
-              name="Aakash Saxena" 
-              text="I joined Trisaran 5 months ago. The app is very user friendly and the personalized website features helped me get more customers."
-              img="/assets/aakash.png"
-            />
-            <Testimonial 
-              name="Sanjay Yadav" 
-              text="I feel proud to be a Trisaran Partner. This job has earned me respect in society. I am happy to help people in difficulties."
-              img="/assets/sanjay.png"
-            />
+          {/* Testimonial 2 - Sanjay Yadav */}
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <p className="text-gray-600 leading-relaxed mb-6">
+              I feel proud to be a Trisaran Partner. This job has earned me respect in society. Also I am very happy to help people when they are in financial difficulties. The appreciation that I get from my customers motivates me to always do my best.
+            </p>
+            <div className="flex items-center gap-4">
+              <img 
+                src="/assets/sanjay.png" 
+                alt="Sanjay Yadav" 
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="font-semibold text-gray-900">Sanjay Yadav</h3>
+                <p className="text-sm text-gray-500">Trisaran Certified Partner</p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+
+        {/* Testimonial 3 - Adesh Chaudhary (Centered) */}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <p className="text-gray-600 leading-relaxed mb-6">
+              I am glad that I chose to associate myself with Trisaran. They have some unique financial products and selling those to people in need makes me very happy because through Trisaran I could make an impact in people's lives. They have the best commissions in the market.
+            </p>
+            <div className="flex items-center gap-4">
+              <img 
+                src="/assets/vinay.png" 
+                alt="Adesh Chaudhary" 
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="font-semibold text-gray-900">Adesh Chaudhary</h3>
+                <p className="text-sm text-gray-500">Trisaran Certified Partner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* FINAL CTA - DYNAMIC BUTTON */}
-          
-<section className="w-full bg-white py-12 md:py-20 font-poppins">
+ <section className="w-full bg-white py-12 md:py-20 font-poppins">
   <div className="max-w-[95%] mx-auto bg-[#3b4758] rounded-[60px] md:rounded-[80px] relative flex flex-col md:flex-row items-center overflow-hidden py-16 md:py-20">
 
     {/* Content Area */}
@@ -242,8 +286,8 @@ export default function BecomePartner() {
       </button>
     </div>
 
-    {/* Handshake Image */}
-    <div className="absolute right-0 bottom-0 h-auto w-1/2 md:w-1/2 flex justify-end items-end pointer-events-none z-10">
+    {/* Handshake Image - Hidden on Mobile, visible on md+ */}
+    <div className="hidden md:flex md:absolute md:right-0 md:bottom-0 md:h-auto md:w-1/2 justify-end items-end pointer-events-none z-10">
       <img
         src="/assets/shake.webp"
         alt="Partner Handshake"
@@ -255,6 +299,8 @@ export default function BecomePartner() {
     <div className="absolute inset-0 bg-gradient-to-r from-[#3b4758] via-[#3b4758]/30 to-transparent md:hidden z-15"></div>
   </div>
 </section>
+
+
     </div>
   );
 }
@@ -294,17 +340,3 @@ function SuccessFeature({ icon, title, desc }: { icon: React.ReactElement; title
   );
 }
 
-function Testimonial({ name, text, img }: { name: string; text: string; img: string }) {
-  return (
-    <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-gray-100">
-      <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 italic">"{text}"</p>
-      <div className="flex items-center gap-4">
-        <img src={img} alt={name} className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-green-100" />
-        <div>
-          <h4 className="font-bold text-gray-900 text-sm md:text-base">{name}</h4>
-          <p className="text-[11px] md:text-xs text-gray-500 uppercase tracking-wider">Certified Partner</p>
-        </div>
-      </div>
-    </div>
-  );
-}
