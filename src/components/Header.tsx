@@ -1,20 +1,25 @@
-import { useState } from "react"; // <-- add this at the top
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false); // <-- mobile menu state
+  const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) =>
     location.pathname === path
       ? "text-blue-600 border-b-2 border-blue-600"
       : "text-gray-700 hover:text-blue-600";
 
+  // Function to handle link click and close menu
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="bg-white border-b border-gray-200 font-['Poppins']">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3" onClick={handleLinkClick}>
             <img src="/assets/logo.webp" alt="Trisaran Money" className="h-10 w-auto" />
           </Link>
 
@@ -69,13 +74,19 @@ export default function Header() {
             { path: "/terms", label: "Terms & Conditions" },
             { path: "/become-partner", label: "Become A Partner" },
           ].map((item) => (
-            <Link key={item.path} to={item.path} className="block py-2">
+            <Link 
+              key={item.path} 
+              to={item.path} 
+              className="block py-2"
+              onClick={handleLinkClick} // Add click handler here
+            >
               <span className={isActive(item.path)}>{item.label}</span>
             </Link>
           ))}
           {/* <Link
             to="/advisor-login"
             className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium mt-2"
+            onClick={handleLinkClick}
           >
             Advisor Login
           </Link> */}
